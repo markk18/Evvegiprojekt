@@ -1,4 +1,4 @@
-Íme a főzős oldal (recept- és gasztro-webalkalmazás) műszaki és használati dokumentációjának vázlata, amelyet közvetlenül felhasználhatsz a projektcsomagodhoz.
+A főzős oldal (recept- és gasztro-webalkalmazás) műszaki és használati dokumentációjának vázlata, amelyet közvetlenül felhasználhatsz a projektcsomagodhoz.
 
 
 Műszaki és Használati Dokumentáció: GasztroKlub Webalkalmazás
