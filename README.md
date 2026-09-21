@@ -30,7 +30,7 @@ A rendszer moduláris, háromrétegű (Client-Server-Database) architektúrára 
 
 2.2. Backend (Szerveroldal)
 
-* **Technológia:** Node.js (Express) / Python (FastAPI/Django) / C# (.NET Core).
+* **Technológia:** Node.js (Express) / C# (.NET Core).
 * **Szerep:** Az üzleti logika megvalósítása, az API végpontok biztosítása és az adatok feldolgozása.
 * **Főbb modulok:**
 * **REST API / GraphQL interfész:** Kommunikáció a frontend és a backend között.
