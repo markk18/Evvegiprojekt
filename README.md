@@ -10,7 +10,7 @@ A szoftver célja egy modern, felhasználóbarát webes platform biztosítása, 
 Fő üzleti és funkcionális célok
 
   Tartalomkezelés: Gyors és egyszerű receptfeltöltés, kategóriákba rendezés (pl. diéta, elkészítési idő, nehézség szerint).
-  Interaktivitás: Felhasználói értékelések, hozzászólások és saját „receptkönyv” (kedvencek) kezelése.
+  Interaktivitás: Felhasználói értékelések, hozzászólások és saját „receptkönyv” kezelése.
   Intelligens funkciók: Adagmennyiség-számítás a megadott személyek száma alapján, valamint hozzávalók alapú receptkeresés ("Mi van a hűtőmben?").
 
 2. Komponensek technikai leírása
@@ -19,8 +19,8 @@ A rendszer moduláris, háromrétegű (Client-Server-Database) architektúrára 
 
 2.1. Frontend (Kliensoldal)
 
-  Technológia: ReactJS / Next.js (vagy HTML5, CSS3/Tailwind CSS, JavaScript ES6+).
-  Szerep: A felhasználói felület (UI) és a felhasználói élmény (UX) biztosítása.
+  Technológia: ReactJS / Next.js (vagy HTML, JavaScript).
+  Szerep: A felhasználói felület és a felhasználói élmény biztosítása.
   Főbb modulok:
     Navigációs és Kereső modul: Dinamikus szűrőkkel (gluténmentes, vegán stb.) és azonnali találati listával.
     Receptmegjelenítő modul: Dinamikus adagszámítóval és lépésről lépésre követhető főzési móddal.
@@ -30,34 +30,34 @@ A rendszer moduláris, háromrétegű (Client-Server-Database) architektúrára 
 
 2.2. Backend (Szerveroldal)
 
-  Technológia: Node.js (Express) / C# (.NET Core).
+  Technológia: Node.js / C# .
   Szerep: Az üzleti logika megvalósítása, az API végpontok biztosítása és az adatok feldolgozása.
   Főbb modulok:
-    REST API / GraphQL interfész: Kommunikáció a frontend és a backend között.
-    Hitelesítési modul (Auth): JWT (JSON Web Token) alapú biztonságos bejelentkezés és jogosultságkezelés.
+    REST API interfész: Kommunikáció a frontend és a backend között.
+    Hitelesítési modul: JWT (JSON Web Token) alapú biztonságos bejelentkezés és jogosultságkezelés.
     Média-kezelő modul: Ételképek és videók feltöltése, átméretezése és optimalizálása (pl. Cloudinary vagy helyi tárhely segítségével).
 
 
 
 2.3. Adatbázis (Database)
 
-  Technológia: PostgreSQL (relációs) vagy MongoDB (NoSQL).
+  Technológia: MySQL.
   Szerep: A strukturált adatok (felhasználók, receptek, hozzávalók, értékelések) biztonságos tárolása.
   Szerkezet:  
-   `Users`: Felhasználói adatok, jelszóhashek, jogosultságok.
-   `Recipes`: Cím, leírás, elkészítési idő, nehézség, kép URL-ek.
-   `Ingredients`: Hozzávalók törzsadatbázisa és mértékegységei.
-   `Reviews`: Értékelések és kommentek kapcsolótáblái.
+   `Felhasznalok`: Felhasználói adatok, jelszóhashek, jogosultságok.
+   `Receptek`: Cím, leírás, elkészítési idő, nehézség, kép URL-ek.
+   `Hozzavalok`: Hozzávalók törzsadatbázisa és mértékegységei.
+   `Ertekelesek`: Értékelések és kommentek kapcsolótáblái.
 
 
 3. A működés műszaki feltételei
 
 3.1. Szerveroldali feltételek (Infrastruktúra)
 
-  Operációs rendszer: Linux (Ubuntu Server 22.04 LTS ajánlott) vagy Docker konténer környezet.
-  Futztatókörnyezet: Node.js (v18+) / Python (3.10+) / .NET 8.
+  Operációs rendszer: Linux (Ubuntu Server 22.04 LTS ajánlott).
+  Futztatókörnyezet: Node.js / Python / .NET 8.
   Adatbázisszerver: PostgreSQL 14+ vagy MongoDB 6.0+.
-  Webszerver / Reverse Proxy: Nginx vagy Apache (SSL/TLS tanúsítvánnyal, HTTPS protokollal).
+  Webszerver / Reverse Proxy: Apache (SSL/TLS tanúsítvánnyal, HTTPS protokollal).
   Minimum hardverigény:
    CPU: 2 vCPU
    RAM: 4 GB
